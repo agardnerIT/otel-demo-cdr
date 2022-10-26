@@ -14,5 +14,5 @@ spec:
   postRenderers:
     - kustomize:
         patchesStrategicMerge:
-          - set-adservice-owner.yaml
+        - set-adservice-owner.yaml
   interval: 0m30s
