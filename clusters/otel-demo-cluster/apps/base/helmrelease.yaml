@@ -22,9 +22,14 @@ spec:
                 "owner": "teamA"
                 "priority": "P1"
             spec:
-              containers:
-              - name: my-otel-demo-adservice
-                env:
-                - name: "foo"
-                  value: "bar"
+              template:
+                metadata:
+                  labels:
+                    "foo1": "bar1"
+                spec:
+                  containers:
+                  - name: my-otel-demo-adservice
+                    env:
+                    - name: "foo2"
+                      value: "bar2"
   interval: 1m0s
