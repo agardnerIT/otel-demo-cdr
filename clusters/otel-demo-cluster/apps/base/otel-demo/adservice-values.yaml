@@ -7,6 +7,4 @@ spec:
   values:
     components:
       adService:
-        env:
-          - name: OWNER
-            value: teamA
+        enabled: "false"
