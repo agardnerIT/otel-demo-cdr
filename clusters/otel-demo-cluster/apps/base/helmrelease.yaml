@@ -16,4 +16,4 @@ spec:
     components:
       currencyService:
         enabled: false
-  interval: 1m0s
+  interval: 0m30s
