@@ -18,12 +18,12 @@ patches:
         template:
           metadata:
             labels:
-              owner: tired2
+              owner: foo
           spec:
             containers:
             - name: adservice
               env:
-                - name: "foo"
+                - name: "owner"
                   value: "foo"
     target:
       kind: Deployment
