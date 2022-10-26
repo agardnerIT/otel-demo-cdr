@@ -21,11 +21,17 @@ spec:
               name: my-otel-demo-adservice
               labels:
                 owner: "TeamA"
+                app.kubernetes.io/part-of: "otel-demo"
+                dynatrace-release-stage: "production"
+                app.kubernetes.io/version: 0.6.1
             spec:
               template:
                 metadata:
                   labels:
                     owner: "TeamA"
+                    app.kubernetes.io/part-of: "otel-demo"
+                    dynatrace-release-stage: "production"
+                    app.kubernetes.io/version: 0.6.1
                 spec:
                   containers:
                   - name: adservice
@@ -34,4 +40,16 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['owner']
+                    - name: DT_RELEASE_PRODUCT
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/part-of']
+                    - name: DT_RELEASE_STAGE
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['dynatrace-release-stage']
+                    - name: DT_RELEASE_VERSION
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/version']
                               
