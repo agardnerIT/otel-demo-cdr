@@ -4,5 +4,5 @@ metadata:
   name: opentelemetry
   namespace: otel-demo
 spec:
-  interval: 1m0s
+  interval: 1h0m0s
   url: https://open-telemetry.github.io/opentelemetry-helm-charts
