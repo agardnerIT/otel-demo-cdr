@@ -8,7 +8,6 @@ spec:
   dependsOn:
     - name: dynatrace-standard-components
   interval: 1m
-  path: "../dynatrace-standard-components"
   prune: true
   sourceRef:
     kind: GitRepository
