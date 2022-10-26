@@ -27,4 +27,4 @@ patches:
                   value: "foo"
     target:
       kind: Deployment
-      labelSelector: app.kubernetes.io/component=adservice2
+      labelSelector: app.kubernetes.io/component=adservice
