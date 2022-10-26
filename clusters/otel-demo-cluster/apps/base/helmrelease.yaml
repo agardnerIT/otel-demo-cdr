@@ -11,4 +11,12 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
+  postRenderers:
+    - kustomize:
+      patchesStrategicMerge:
+        - kind: Deployment
+          metadata:
+            name: my-otel-demo-adservice
+            labels:
+              owner: teamA
   interval: 1m0s
