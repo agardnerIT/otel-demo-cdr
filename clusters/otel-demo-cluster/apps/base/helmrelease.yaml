@@ -11,4 +11,26 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
+  postRenderers:
+    - kustomize:
+        patchesStrategicMerge:
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-adservice
+              labels:
+                owner: owner1
+            spec:
+              template:
+                metadata:
+                  labels:
+                    owner: owner1
+                spec:
+                  containers:
+                  - name: adservice
+                    env:
+                    - name: OWNER
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['owner']
   interval: 0m30s
