@@ -1,11 +1,17 @@
 ---
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: dynatrace
+  name: dynatrace-custom-components
   namespace: dynatrace
 spec:
   dependsOn:
     - name: dynatrace-standard-components
+  interval: 5m
+  path: "../dynatrace-standard-components"
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
 resources:
   - dynakube.yaml
