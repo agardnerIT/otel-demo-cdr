@@ -11,20 +11,4 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
-  values:
-    # disable currency service
-    components:
-      currencyService:
-        enabled: false
-      # Add owner and priority to default adService env vars
-      adService:
-        env:
-          - name: OTEL_EXPORTER_OTLP_ENDPOINT
-            value: 'http://{{ include "otel-demo.name" . }}-otelcol:4317'
-          - name: AD_SERVICE_PORT
-            value: "8080"
-          - name: OWNER
-            value: "TeamA"
-          - name: PRIORITY
-            value: "P1"
   interval: 0m30s

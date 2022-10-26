@@ -5,3 +5,17 @@ resources:
   - helmsource.yaml
   - helmrelease.yaml
   - namespace.yaml
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: not-used
+      spec:
+        template:
+          metadata:
+            labels:
+              ag-label-1: label-value-1
+    target:
+      kind: Deployment
+      labelSelector: "app.kubernetes.io/component:adservice"
