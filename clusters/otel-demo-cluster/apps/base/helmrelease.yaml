@@ -11,9 +11,9 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
-  values:
-    # disable currency service
-    components:
-      currencyService:
-        enabled: "false"
+      values:
+        # disable currency service
+        components:
+          currencyService:
+            enabled: "false"
   interval: 1m0s
