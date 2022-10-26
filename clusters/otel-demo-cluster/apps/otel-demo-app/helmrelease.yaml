@@ -12,3 +12,21 @@ spec:
         name: opentelemetry
       version: 0.9.6
   interval: 0m30s
+  postRenderers:
+    - kustomize:
+        patchesStrategicMerge:
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-adservice
+            spec:
+              template:
+                metadata:
+                  labels:
+                    owner: foo
+                spec:
+                  containers:
+                  - name: adservice
+                    env:
+                      - name: foo
+                        value: bar
