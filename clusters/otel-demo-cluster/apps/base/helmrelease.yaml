@@ -19,8 +19,8 @@ spec:
             metadata:
               name: my-otel-demo-adservice
               labels:
-                "owner": "teamA"
-                "priority": "P1"
+                owner: teamA1
+                priority: P1
             spec:
               template:
                 metadata:
