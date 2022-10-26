@@ -19,14 +19,19 @@ spec:
             apiVersion: apps/v1
             metadata:
               name: my-otel-demo-adservice
+              labels:
+                owner: "TeamA"
             spec:
               template:
                 metadata:
                   labels:
-                    owner: foo2
+                    owner: "TeamA"
                 spec:
                   containers:
                   - name: adservice
                     env:
-                      - name: foo
-                        value: bar2
+                    - name: owner
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['owner']
+                              
