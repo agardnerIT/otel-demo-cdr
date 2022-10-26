@@ -11,4 +11,4 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
-  interval: 0m10s
+  interval: 1m00s
