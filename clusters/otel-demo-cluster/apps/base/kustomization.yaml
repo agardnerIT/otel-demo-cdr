@@ -18,4 +18,4 @@ patches:
               ag-label-1: label-value-1
     target:
       kind: Deployment
-      labelSelector: "app.kubernetes.io/component:adservice"
+      labelSelector: "app.kubernetes.io/component=adservice"
