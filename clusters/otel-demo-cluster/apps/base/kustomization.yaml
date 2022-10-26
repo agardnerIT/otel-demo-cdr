@@ -5,3 +5,5 @@ resources:
   - helmsource.yaml
   - helmrelease.yaml
   - namespace.yaml
+patchesStrategicMerge:
+  - "set-adservice-owner.yaml"

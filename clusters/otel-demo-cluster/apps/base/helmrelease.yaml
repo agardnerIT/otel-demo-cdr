@@ -11,8 +11,4 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
-  postRenderers:
-    - kustomize:
-        patchesStrategicMerge:
-        - set-adservice-owner.yaml
-  interval: 0m30s
+  interval: 0m10s
