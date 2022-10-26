@@ -24,8 +24,6 @@ spec:
               containers:
               - name: my-otel-demo-adservice
                 env:
-                - name: "owner"
-                  valueFrom:
-                    fieldRef:
-                      fieldPath: metadata.labels['owner']
+                - name: "foo"
+                  value: "bar"
   interval: 1m0s
