@@ -20,4 +20,12 @@ spec:
               name: my-otel-demo-adservice
               labels:
                 "owner": "teamA"
+            spec:
+              containers:
+              - name: my-otel-demo-adservice
+                env:
+                - name: "owner"
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: metadata.labels['owner']
   interval: 1m0s
