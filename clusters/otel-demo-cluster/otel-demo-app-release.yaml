@@ -11,8 +11,4 @@ spec:
         kind: HelmRepository
         name: opentelemetry
       version: 0.9.6
-  values:
-    env:
-      - name: OWNER
-        value: teamA
   interval: 1m0s
