@@ -7,10 +7,10 @@ spec:
   template:
     metadata:
       labels:
-        owner: adteam
+        owner: adteam2
     spec:
       containers:
       - name: adservice
         env:
         - name: owner
-          value: adteam
+          value: adteam2
