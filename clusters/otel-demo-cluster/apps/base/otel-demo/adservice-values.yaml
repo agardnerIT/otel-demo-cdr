@@ -5,6 +5,7 @@ metadata:
   namespace: otel-demo
 spec:
   values:
-    env:
-      - name: OWNER
-        value: teamA
+    adService:
+      env:
+        - name: OWNER
+          value: teamA
