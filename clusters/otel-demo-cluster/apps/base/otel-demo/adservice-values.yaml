@@ -4,7 +4,11 @@ metadata:
   name: my-otel-demo
   namespace: otel-demo
 spec:
-  values:
-    components:
-      adService:
-        enabled: "false"
+  postRenderers:
+    - kustomize:
+      patchesStrategicMerge:
+        - kind: Deployment
+          metadata:
+            name: my-otel-demo-adservice
+            labels:
+              owner: teamA
