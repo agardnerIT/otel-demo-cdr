@@ -13,11 +13,11 @@ spec:
       version: 0.9.6
   postRenderers:
     - kustomize:
-      patchesStrategicMerge:
-        - kind: Deployment
-          apiVersion: apps/v1
-          metadata:
-            name: my-otel-demo-adservice
-            labels:
-              "owner": "teamA"
+        patchesStrategicMerge:
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-adservice
+              labels:
+                "owner": "teamA"
   interval: 1m0s
