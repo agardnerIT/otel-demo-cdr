@@ -15,7 +15,7 @@ spec:
   # Optional: Name of the secret holding the credentials required to connect to the Dynatrace tenant
   # If unset, the name of this custom resource is used
   #
-  # tokens: ""
+  tokens: "otel-demo"
 
   # Optional: Defines a custom pull secret in case you use a private registry when pulling images from the dynatrace environment
   # The secret has to be of type 'kubernetes.io/dockerconfigjson' (see https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/)
@@ -149,6 +149,7 @@ spec:
     capabilities:
       - routing
       - dynatrace-api
+      - metrics-ingest
 
     # Optional: Sets the image used to deploy ActiveGate instances
     # Defaults to the latest ActiveGate image on the tenant's registry
