@@ -150,6 +150,7 @@ spec:
       - routing
       - dynatrace-api
       - metrics-ingest
+      - kubernetes-monitoring
 
     # Optional: Sets the image used to deploy ActiveGate instances
     # Defaults to the latest ActiveGate image on the tenant's registry
