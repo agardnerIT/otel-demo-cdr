@@ -3,3 +3,5 @@ config:
 
 otel-demo:
   - name: "otel-demo"
+  - endpointUrl: "{{ .Env.K8S_ENDPOINT }}"
+  - bearerToken: "{{ .Env.K8S_BEARER_TOKEN }}"
