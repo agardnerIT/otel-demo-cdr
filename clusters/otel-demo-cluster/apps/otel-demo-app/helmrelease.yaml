@@ -271,8 +271,8 @@ spec:
             metadata:
               name: my-otel-demo-featureflagservice
               labels:
-                owner: "Marketing"
-                priority: "P2"
+                owner: "DataScience"
+                priority: "P4"
                 variant: "var2"
                 app.kubernetes.io/part-of: "otel-demo"
                 dynatrace-release-stage: "production"
@@ -281,8 +281,8 @@ spec:
               template:
                 metadata:
                   labels:
-                    owner: "Marketing"
-                    priority: "P2"
+                    owner: "DataScience"
+                    priority: "P4"
                     variant: "var2"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
@@ -290,6 +290,56 @@ spec:
                 spec:
                   containers:
                   - name: featureflagservice
+                    env:
+                    - name: owner
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['owner']
+                    - name: priority
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['priority']
+                    - name: variant
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['variant']
+                    - name: DT_RELEASE_PRODUCT
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/part-of']
+                    - name: DT_RELEASE_STAGE
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['dynatrace-release-stage']
+                    - name: DT_RELEASE_VERSION
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/version']
+          # ffspostgres
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-ffspostgres
+              labels:
+                owner: "DataScience"
+                priority: "P4"
+                variant: "var1"
+                app.kubernetes.io/part-of: "otel-demo"
+                dynatrace-release-stage: "production"
+                app.kubernetes.io/version: "0.6.1-beta"
+            spec:
+              template:
+                metadata:
+                  labels:
+                    owner: "DataScience"
+                    priority: "P4"
+                    variant: "var1"
+                    app.kubernetes.io/part-of: "otel-demo"
+                    dynatrace-release-stage: "production"
+                    app.kubernetes.io/version: "0.6.1-beta"
+                spec:
+                  containers:
+                  - name: ffspostgres
                     env:
                     - name: owner
                       valueFrom:
