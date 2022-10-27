@@ -1,0 +1,5 @@
+config:
+  - otel-demo: "connection.json"
+
+otel-demo:
+  - name: "otel-demo"
