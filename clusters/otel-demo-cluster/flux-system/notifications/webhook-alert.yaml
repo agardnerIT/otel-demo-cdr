@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   providerRef:
-    name: webhook.site
+    name: generic
   eventSeverity: info
   eventSources:
     - kind: HelmRelease
