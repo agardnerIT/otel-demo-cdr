@@ -515,4 +515,59 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['app.kubernetes.io/version']
+          # loadgenerator
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-otelcol
+              labels:
+                owner: "DevOps"
+                priority: "P1"
+                variant: "var1"
+                app.kubernetes.io/part-of: "otel-demo"
+                dynatrace-release-stage: "production"
+                app.kubernetes.io/version: "0.6.1-beta"
+            spec:
+              template:
+                metadata:
+                  labels:
+                    owner: "DevOps"
+                    priority: "P1"
+                    variant: "var1"
+                    app.kubernetes.io/part-of: "otel-demo"
+                    dynatrace-release-stage: "production"
+                    app.kubernetes.io/version: "0.6.1-beta"
+                spec:
+                  containers:
+                  - name: opentelemetry-collector
+                    env:
+                    - name: owner
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['owner']
+                    - name: priority
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['priority']
+                    - name: variant
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['variant']
+                    - name: DT_RELEASE_PRODUCT
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/part-of']
+                    - name: DT_RELEASE_STAGE
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['dynatrace-release-stage']
+                    - name: DT_RELEASE_VERSION
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/version']
+
+
+
+
+                          
                               
