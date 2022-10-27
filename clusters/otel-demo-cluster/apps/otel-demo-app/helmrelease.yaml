@@ -221,8 +221,8 @@ spec:
             metadata:
               name: my-otel-demo-emailservice
               labels:
-                owner: "TeamC"
-                priority: "P3"
+                owner: "Marketing"
+                priority: "P2"
                 variant: "var1"
                 app.kubernetes.io/part-of: "otel-demo"
                 dynatrace-release-stage: "production"
@@ -231,8 +231,8 @@ spec:
               template:
                 metadata:
                   labels:
-                    owner: "TeamC"
-                    priority: "P3"
+                    owner: "Marketing"
+                    priority: "P2"
                     variant: "var1"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
