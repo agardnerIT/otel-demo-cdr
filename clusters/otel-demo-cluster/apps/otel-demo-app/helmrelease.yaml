@@ -39,7 +39,7 @@ spec:
                     app.kubernetes.io/version: "0.6.1-beta"
                 spec:
                   containers:
-                  - name: adservice
+                  - name: cartservice
                     env:
                     - name: owner
                       valueFrom:
