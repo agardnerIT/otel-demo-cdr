@@ -65,6 +65,8 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['app.kubernetes.io/version']
+    - kustomize:
+        patchesStrategicMerge:
           # cartservice
           - kind: Deployment
             apiVersion: apps/v1
