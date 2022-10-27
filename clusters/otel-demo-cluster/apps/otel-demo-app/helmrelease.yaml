@@ -665,6 +665,56 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['app.kubernetes.io/version']
+          # quoteservice
+          - kind: Deployment
+            apiVersion: apps/v1
+            metadata:
+              name: my-otel-demo-quoteservice
+              labels:
+                owner: "BizOps"
+                priority: "P4"
+                variant: "var1"
+                app.kubernetes.io/part-of: "otel-demo"
+                dynatrace-release-stage: "production"
+                app.kubernetes.io/version: "0.6.1-beta"
+            spec:
+              template:
+                metadata:
+                  labels:
+                    owner: "BizOps"
+                    priority: "P4"
+                    variant: "var1"
+                    app.kubernetes.io/part-of: "otel-demo"
+                    dynatrace-release-stage: "production"
+                    app.kubernetes.io/version: "0.6.1-beta"
+                spec:
+                  containers:
+                  - name: quoteservice
+                    env:
+                    - name: owner
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['owner']
+                    - name: priority
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['priority']
+                    - name: variant
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['variant']
+                    - name: DT_RELEASE_PRODUCT
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/part-of']
+                    - name: DT_RELEASE_STAGE
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['dynatrace-release-stage']
+                    - name: DT_RELEASE_VERSION
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/version']
 
 
 
