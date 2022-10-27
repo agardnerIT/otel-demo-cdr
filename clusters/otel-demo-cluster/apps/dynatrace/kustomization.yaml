@@ -9,4 +9,3 @@ resources:
   - helmrelease.yaml
   - helmsource.yaml
   - namespace.yaml
-  - otel-demo-cluster-sealed.yaml
