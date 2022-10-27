@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   providerRef:
-    name: generic
+    name: webhooksite
   eventSeverity: info
   eventSources:
     - kind: HelmRelease
