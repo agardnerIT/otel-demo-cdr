@@ -23,6 +23,7 @@ spec:
               labels:
                 owner: "TeamA"
                 priority: "P5"
+                variant: "var1"
                 app.kubernetes.io/part-of: "otel-demo"
                 dynatrace-release-stage: "production"
                 app.kubernetes.io/version: 0.6.1
@@ -31,6 +32,8 @@ spec:
                 metadata:
                   labels:
                     owner: "TeamA"
+                    priority: "P5"
+                    variant: "var1"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
                     app.kubernetes.io/version: 0.6.1
@@ -42,6 +45,14 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['owner']
+                    - name: priority
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['priority']
+                    - name: variant
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['variant']
                     - name: DT_RELEASE_PRODUCT
                       valueFrom:
                         fieldRef:
