@@ -1,7 +1,7 @@
 apiVersion: dynatrace.com/v1beta1
 kind: DynaKube
 metadata:
-  name: dynakube
+  name: otel-demo
   namespace: dynatrace
   annotations:
     feature.dynatrace.com/oneagent-privileged: "true"
