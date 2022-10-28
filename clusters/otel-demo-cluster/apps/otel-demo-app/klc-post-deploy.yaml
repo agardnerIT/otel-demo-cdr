@@ -7,4 +7,10 @@ spec:
   function:
     inline:
       code: |
-        console.log("Post-Deployment Task has been executed");
+        console.log(">> Post-Deployment Task has been executed");
+        const headers = new Headers({ "x-klc-step": "post-deploy-test" });
+        const res = await fetch("https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660", {
+          headers,
+        });
+        const body = new Uint8Array(await res.arrayBuffer());
+        console.log(body)

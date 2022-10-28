@@ -8,6 +8,5 @@ resources:
   - "helmsource.yaml"
   - "helmrelease.yaml"
   - "namespace.yaml"
-  - "klc-pre-deploy.yaml"
   - "klc-post-deploy.yaml"
   - "klc-app.yaml"
