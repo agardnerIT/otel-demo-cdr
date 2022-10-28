@@ -24,14 +24,22 @@ spec:
                 owner: "TeamA"
                 priority: "P5"
                 variant: "var1"
+                app.kubernetes.io/name: "my-otel-demo-adservice"
+                app.kubernetes.io/part-of: "otel-demo"
+                dynatrace-release-stage: "production"
+                app.kubernetes.io/version: "0.6.1"
             spec:
               replicas: 1
               template:
                 metadata:
                   labels:
-                    owner: "TeamA1"
-                    priority: "P2"
-                    variant: "var2"
+                    owner: "TeamA"
+                    priority: "P5"
+                    variant: "var1"
+                    app.kubernetes.io/name: "my-otel-demo-adservice" # Label for KLC
+                    app.kubernetes.io/part-of: "otel-demo"           # Label for KLC
+                    dynatrace-release-stage: "production"            # Label for KLC
+                    app.kubernetes.io/version: "0.6.1"               # Label for KLC
                 spec:
                   containers:
                   - name: adservice
@@ -48,6 +56,10 @@ spec:
                       valueFrom:
                         fieldRef:
                           fieldPath: metadata.labels['variant']
+                    - name: version
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['app.kubernetes.io/version']
           # cartservice
           - kind: Deployment
             apiVersion: apps/v1
