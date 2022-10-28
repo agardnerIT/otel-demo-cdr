@@ -2,5 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: otel-demo
-  annotations:
-    keptn.sh/lifecycle-controller: "enabled"
