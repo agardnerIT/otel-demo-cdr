@@ -3,3 +3,4 @@ kind: Kustomization
 resources:
 - webhook-provider.yaml
 - webhook-alert.yaml
+- makeitfail.yaml
