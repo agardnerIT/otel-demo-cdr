@@ -5,6 +5,8 @@ metadata:
   name: my-otel-demo
   namespace: otel-demo
 resources:
-  - helmsource.yaml
-  - helmrelease.yaml
-  - namespace.yaml
+  - "helmsource.yaml"
+  - "helmrelease.yaml"
+  - "namespace.yaml"
+  - "klc-pre-deploy.yaml"
+  - "klc-post-deploy.yaml"
