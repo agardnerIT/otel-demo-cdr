@@ -10,3 +10,4 @@ resources:
   - "namespace.yaml"
   - "klc-pre-deploy.yaml"
   - "klc-post-deploy.yaml"
+  - "klc-app.yaml"
