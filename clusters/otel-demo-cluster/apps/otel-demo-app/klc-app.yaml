@@ -1,0 +1,14 @@
+apiVersion: lifecycle.keptn.sh/v1alpha1
+kind: KeptnApp
+metadata:
+  name: otel-demo
+  namespace: otel-demo
+spec:
+  version: "0.6.1"
+  workloads:
+    - name: my-otel-demo-adservice
+      version: 0.6.1
+  preDeploymentTasks:
+    - pre-deploy-task
+  postDeploymentTasks:
+    - post-deploy-task
