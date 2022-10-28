@@ -21,7 +21,7 @@ spec:
             metadata:
               name: my-otel-demo-adservice
               labels:
-                owner: "TeamA1"
+                owner: "TeamA"
                 priority: "P5"
                 variant: "var1"
                 app.kubernetes.io/part-of: "otel-demo"
