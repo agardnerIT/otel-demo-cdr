@@ -1,8 +1,9 @@
 apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Provider
 metadata:
-  name: webhooksite
+  name: webhook
   namespace: flux-system
 spec:
   type: generic
-  address: https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660
+  secretRef:
+    name: webhook-site-secret
