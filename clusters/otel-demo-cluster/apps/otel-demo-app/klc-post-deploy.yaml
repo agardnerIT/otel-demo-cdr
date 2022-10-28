@@ -2,6 +2,7 @@ apiVersion: lifecycle.keptn.sh/v1alpha1
 kind: KeptnTaskDefinition
 metadata:
   name: post-deploy-task
+  namespace: otel-demo
 spec:
   function:
     inline:
