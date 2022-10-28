@@ -32,7 +32,7 @@ spec:
                 metadata:
                   labels:
                     owner: "TeamA"
-                    priority: "P5"
+                    priority: "P4"
                     variant: "var1"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
