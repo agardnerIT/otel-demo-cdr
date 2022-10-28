@@ -30,7 +30,7 @@ spec:
                 keptn.sh/pre-deployment-tasks: pre-deploy-task
                 keptn.sh/post-deployment-tasks: post-deploy-task
             spec:
-              replicas: 1
+              replicas: 2
               template:
                 metadata:
                   labels:
