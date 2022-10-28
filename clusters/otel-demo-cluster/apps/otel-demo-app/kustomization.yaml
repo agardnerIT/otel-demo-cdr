@@ -8,5 +8,5 @@ resources:
   - "helmsource.yaml"
   - "helmrelease.yaml"
   - "namespace.yaml"
-  - "klc-post-deploy.yaml"
-  - "keptn-app.yaml"
+#  - "klc-post-deploy.yaml"
+#  - "keptn-app.yaml"

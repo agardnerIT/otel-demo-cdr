@@ -24,18 +24,18 @@ spec:
                 owner: "TeamA"
                 priority: "P5"
                 variant: "var1"
-                app.kubernetes.io/part-of: "otel-demo"
-                dynatrace-release-stage: "production"
-                app.kubernetes.io/version: "0.6.1"
-                app.kubernetes.io/name: "my-otel-demo-adservice"
+                #app.kubernetes.io/part-of: "otel-demo"
+                #dynatrace-release-stage: "production"
+                #app.kubernetes.io/version: "0.6.1"
+                #app.kubernetes.io/name: "my-otel-demo-adservice"
             spec:
               replicas: 1
               template:
                 metadata:
                   labels:
-                    owner: "TeamA"
-                    priority: "P5"
-                    variant: "var1"
+                    owner: "TeamA1"
+                    priority: "P2"
+                    variant: "var2"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
                     app.kubernetes.io/version: "0.6.1"
