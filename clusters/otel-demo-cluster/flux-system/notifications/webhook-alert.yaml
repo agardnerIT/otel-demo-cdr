@@ -4,11 +4,12 @@ metadata:
   name: webhook-alert
   namespace: flux-system
 spec:
-  summary: "alert to webhook.site"
   providerRef:
     name: webhooksite
   eventSeverity: info
   eventSources:
+    - kind: GitRepository
+      name: "*"
     - kind: HelmRelease
       name: "*"
     - kind: Kustomization
