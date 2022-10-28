@@ -28,6 +28,7 @@ spec:
                 dynatrace-release-stage: "production"
                 app.kubernetes.io/version: "0.6.1"
                 keptn.sh/post-deployment-tasks: post-deploy-task
+                app.kubernetes.io/name: "my-otel-demo-adservice"
             spec:
               replicas: 2
               template:
