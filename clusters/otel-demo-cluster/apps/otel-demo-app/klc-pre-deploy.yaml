@@ -8,7 +8,3 @@ spec:
     inline:
       code: |
         console.log("Pre-Deployment Task has been executed");
-        const headers = new Headers({ "x-klc-step": "pre-deploy-test" });
-        const res = await fetch("https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660", {
-          headers,
-        });
