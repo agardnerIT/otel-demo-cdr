@@ -21,7 +21,7 @@ spec:
             metadata:
               name: my-otel-demo-adservice
               labels:
-                owner: "TeamA1"
+                owner: "TeamA"
                 priority: "P5"
                 variant: "var1"
                 app.kubernetes.io/part-of: "otel-demo"
@@ -29,12 +29,12 @@ spec:
                 app.kubernetes.io/version: "0.6.1"
                 keptn.sh/post-deployment-tasks: post-deploy-task
             spec:
-              replicas: 2
+              replicas: 1
               template:
                 metadata:
                   labels:
                     owner: "TeamA"
-                    priority: "P4"
+                    priority: "P5"
                     variant: "var1"
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
