@@ -27,7 +27,6 @@ spec:
                 app.kubernetes.io/part-of: "otel-demo"
                 dynatrace-release-stage: "production"
                 app.kubernetes.io/version: "0.6.1"
-                keptn.sh/post-deployment-tasks: post-deploy-task
                 app.kubernetes.io/name: "my-otel-demo-adservice"
             spec:
               replicas: 1
@@ -40,8 +39,8 @@ spec:
                     app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
                     app.kubernetes.io/version: "0.6.1"
-                    keptn.sh/post-deployment-tasks: post-deploy-task
-                    app.kubernetes.io/name: "my-otel-demo-adservice"
+                    keptn.sh/post-deployment-tasks: "post-deploy-service-task" # Service task. App task(s) are in keptn-app.yaml
+                    app.kubernetes.io/name: "my-otel-demo-adservice" # KLC uses this NOT the Deployment name
                 spec:
                   containers:
                   - name: adservice
