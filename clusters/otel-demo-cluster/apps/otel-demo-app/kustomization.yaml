@@ -8,3 +8,4 @@ resources:
   - "helmsource.yaml"
   - "helmrelease.yaml"
   - "namespace.yaml"
+  - "keptn-app.yaml"
