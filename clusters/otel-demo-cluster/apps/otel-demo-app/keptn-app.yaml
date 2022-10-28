@@ -6,5 +6,5 @@ metadata:
 spec:
   version: "0.6.1"
   workloads:
-    - name: my-otel-demo-adservice # This must match app.kubernetes.io/name label
+    - name: my-otel-demo # This must match app.kubernetes.io/name label
       version: "0.6.1"
