@@ -7,4 +7,4 @@ spec:
   version: "0.6.1"
   workloads:
     - name: my-otel-demo-adservice
-      version: "0.6.1" # This must match app.kubernetes.io/version from helmrelease.yaml
+      version: "0.6.1"
