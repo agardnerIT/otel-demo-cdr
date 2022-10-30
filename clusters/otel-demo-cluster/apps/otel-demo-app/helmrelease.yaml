@@ -38,7 +38,7 @@ spec:
                     app.kubernetes.io/part-of: "otel-demo"                    # Label for KLC
                     dynatrace-release-stage: "production"                     # Label for KLC
                     app.kubernetes.io/version: "0.6.1"                        # Label for KLC
-                    app.kubernetes.io/name: "my-otel-demo"                    # Label for KLC
+                    app.kubernetes.io/name: "my-otel-demo-adservice"          # Label for KLC
                     keptn.sh/post-deployment-task: "post-deploy-service-task" # Label for KLC
                 spec:
                   containers:
