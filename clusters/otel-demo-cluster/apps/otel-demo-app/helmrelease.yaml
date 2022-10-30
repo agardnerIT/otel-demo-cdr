@@ -34,7 +34,7 @@ spec:
                   labels:
                     owner: "TeamA"
                     priority: "P5"
-                    variant: "var1"
+                    variant: "var2"
                     app.kubernetes.io/part-of: "otel-demo"                    # Label for KLC
                     dynatrace-release-stage: "production"                     # Label for KLC
                     app.kubernetes.io/version: "0.6.1"                        # Label for KLC
