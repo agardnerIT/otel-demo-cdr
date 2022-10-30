@@ -8,4 +8,4 @@ spec:
   function:
     inline:
       code: |
-        console.log(">> Post-Deployment Task has been executed");
+        console.log(">> Post-Deployment Task has been executed 1");

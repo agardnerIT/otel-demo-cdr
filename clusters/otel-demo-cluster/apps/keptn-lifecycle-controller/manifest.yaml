@@ -1569,7 +1569,7 @@ spec:
           value: otel-collector:4317
         - name: FUNCTION_RUNNER_IMAGE
           value: ghcr.io/keptn-sandbox/functions-runtime:v0.3.0
-        image: ghcr.io/keptn-sandbox/keptn-lifecycle-operator:v0.3.0
+        image: ghcr.io/keptn-sandbox/keptn-lifecycle-operator:dev-202210281112
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
