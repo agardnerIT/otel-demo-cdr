@@ -33,7 +33,7 @@ spec:
                 keptn.sh/workload: "my-otel-demo-adservice"                 # Label for KLC
                 keptn.sh/version: "0.6.1"                                   # Label for KLC
             spec:
-              replicas: 2
+              replicas: 1
               template:
                 metadata:
                   labels:
