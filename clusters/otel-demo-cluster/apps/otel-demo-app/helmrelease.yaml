@@ -28,6 +28,10 @@ spec:
                 dynatrace-release-stage: "production"
                 #app.kubernetes.io/version: "0.6.1"
                 #app.kubernetes.io/name: "my-otel-demo-adservice"
+                keptn.sh/post-deployment-task: "post-deploy-service-task"   # Label for KLC
+                keptn.sh/app: "otel-demo"                                   # Label for KLC
+                keptn.sh/workload: "my-otel-demo-adservice"                 # Label for KLC
+                keptn.sh/version: "0.6.1"                                   # Label for KLC
             spec:
               replicas: 1
               template:
