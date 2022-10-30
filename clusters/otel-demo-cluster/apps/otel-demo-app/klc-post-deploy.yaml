@@ -1,0 +1,16 @@
+apiVersion: lifecycle.keptn.sh/v1alpha1
+kind: KeptnTaskDefinition
+metadata:
+  name: post-deploy-service-task
+  namespace: otel-demo
+spec:
+  function:
+    inline:
+      code: |
+        console.log(">> Post-Deployment service task has been executed");
+        const headers = new Headers({ "x-klc-step": "post-deploy-test" });
+        const res = await fetch("https://webhook.site/2db1fe97-864f-466e-8d29-4e499b15056d", {
+          headers,
+        });
+        const body = new Uint8Array(await res.arrayBuffer());
+        console.log(body)
