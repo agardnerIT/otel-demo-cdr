@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    keptn.sh/lifecycle-toolkit: enabled
+  creationTimestamp: "2022-11-04T02:28:42Z"
+  deletionTimestamp: "2022-11-04T07:41:46Z"
+  labels:
+    kubernetes.io/metadata.name: otel-demo
+    kustomize.toolkit.fluxcd.io/name: flux-system
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+  name: otel-demo
+  resourceVersion: "94222"
+  uid: a83515dd-a52a-4cf6-94b2-08e84863c46a
+spec:
+  finalizers:
+status:
+  conditions:
+  - lastTransitionTime: "2022-11-04T07:42:15Z"
+    message: All resources successfully discovered
+    reason: ResourcesDiscovered
+    status: "False"
+    type: NamespaceDeletionDiscoveryFailure
+  - lastTransitionTime: "2022-11-04T07:42:15Z"
+    message: All legacy kube types successfully parsed
+    reason: ParsedGroupVersions
+    status: "False"
+    type: NamespaceDeletionGroupVersionParsingFailure
+  - lastTransitionTime: "2022-11-04T07:42:26Z"
+    message: All content successfully deleted, may be waiting on finalization
+    reason: ContentDeleted
+    status: "False"
+    type: NamespaceDeletionContentFailure
+  - lastTransitionTime: "2022-11-04T07:42:15Z"
+    message: 'Some resources are remaining: helmreleases.helm.toolkit.fluxcd.io has
+      1 resource instances'
+    reason: SomeResourcesRemain
+    status: "True"
+    type: NamespaceContentRemaining
+  - lastTransitionTime: "2022-11-04T07:42:15Z"
+    message: 'Some content in the namespace has finalizers remaining: finalizers.fluxcd.io
+      in 1 resource instances'
+    reason: SomeFinalizersRemain
+    status: "True"
+    type: NamespaceFinalizersRemaining
+  phase: Terminating
