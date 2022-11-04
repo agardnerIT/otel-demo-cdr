@@ -30,12 +30,11 @@ spec:
               #   keptn.sh/pre-deployment-tasks: "pre-deployment-hello"                                 # Label for KLC
               #   keptn.sh/workload: "my-otel-demo-adservice"                 # Label for KLC
               #   keptn.sh/version: "0.6.1"                                   # Label for KLC
-              # dummy to force re-install
             spec:
               replicas: 2
               template:
                 metadata:
-                  labels:
+                  annotations:
                     owner: "TeamA"
                     priority: "P5"
                     variant: "var1"
@@ -47,23 +46,23 @@ spec:
                 spec:
                   containers:
                   - name: adservice
-                    env:
-                    - name: owner
-                      valueFrom:
-                        fieldRef:
-                          fieldPath: metadata.labels['owner']
-                    - name: priority
-                      valueFrom:
-                        fieldRef:
-                          fieldPath: metadata.labels['priority']
-                    - name: variant
-                      valueFrom:
-                        fieldRef:
-                          fieldPath: metadata.labels['variant']
-                    - name: version
-                      valueFrom:
-                        fieldRef:
-                          fieldPath: metadata.labels['app.kubernetes.io/version']
+                    # env:
+                    # - name: owner
+                    #   valueFrom:
+                    #     fieldRef:
+                    #       fieldPath: metadata.labels['owner']
+                    # - name: priority
+                    #   valueFrom:
+                    #     fieldRef:
+                    #       fieldPath: metadata.labels['priority']
+                    # - name: variant
+                    #   valueFrom:
+                    #     fieldRef:
+                    #       fieldPath: metadata.labels['variant']
+                    # - name: version
+                    #   valueFrom:
+                    #     fieldRef:
+                    #       fieldPath: metadata.labels['app.kubernetes.io/version']
           # cartservice
           - kind: Deployment
             apiVersion: apps/v1
