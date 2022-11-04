@@ -31,6 +31,7 @@ spec:
               #   keptn.sh/pre-deployment-tasks: "pre-deployment-hello"                                 # Label for KLC
               #   keptn.sh/workload: "my-otel-demo-adservice"                 # Label for KLC
               #   keptn.sh/version: "0.6.1"                                   # Label for KLC
+              # dummy to force re-install
             spec:
               replicas: 1
               template:
