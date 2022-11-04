@@ -14,7 +14,7 @@ spec:
   interval: 1m00s
   postRenderers:
     - kustomize:
-        patches:
+        patchesStrategicMerge:
           # adservice
           - kind: Deployment
             apiVersion: apps/v1
