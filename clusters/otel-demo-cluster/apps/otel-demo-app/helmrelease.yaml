@@ -32,7 +32,7 @@ spec:
               #   keptn.sh/version: "0.6.1"                                   # Label for KLC
               # dummy to force re-install
             spec:
-              replicas: 2
+              replicas: 1
               template:
                 metadata:
                   labels:
@@ -77,6 +77,7 @@ spec:
                 dynatrace-release-stage: "production"
                 app.kubernetes.io/version: "0.6.1-beta"
             spec:
+              replicas: 2
               template:
                 metadata:
                   labels:
