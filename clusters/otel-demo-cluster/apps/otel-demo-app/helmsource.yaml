@@ -2,7 +2,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
   name: opentelemetry
-  namespace: otel-demo2
+  namespace: otel-demo
 spec:
   interval: 1h0m0s
   url: https://open-telemetry.github.io/opentelemetry-helm-charts

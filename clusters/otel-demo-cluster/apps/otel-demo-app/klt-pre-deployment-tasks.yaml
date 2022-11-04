@@ -3,7 +3,7 @@ apiVersion: lifecycle.keptn.sh/v1alpha1
 kind: KeptnTaskDefinition
 metadata:
   name: pre-deployment-hello
-  namespace: otel-demo2
+  namespace: otel-demo
 spec:
   function:
     inline:
