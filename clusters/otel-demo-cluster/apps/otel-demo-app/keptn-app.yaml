@@ -2,7 +2,7 @@ apiVersion: lifecycle.keptn.sh/v1alpha1
 kind: KeptnApp
 metadata:
   name: otel-demo
-  namespace: otel-demo
+  namespace: otel-demo2
 spec:
   version: "0.0.1"
   workloads:
