@@ -13,6 +13,8 @@ spec:
       version: 0.38.0
   interval: 1m00s
   values:
+    service:
+      type: ClusterIP
     extraEnvs:
       - name: "DT_OTLP_ENDPOINT"
         valueFrom:
