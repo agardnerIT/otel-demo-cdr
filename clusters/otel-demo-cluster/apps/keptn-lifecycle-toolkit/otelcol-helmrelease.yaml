@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: otel-col
+  name: otel-collector
   namespace: keptn-lifecycle-toolkit-system
 spec:
   chart:
@@ -13,8 +13,6 @@ spec:
       version: 0.38.0
   interval: 1m00s
   values:
-    service:
-      type: ClusterIP
     extraEnvs:
       - name: "DT_OTLP_ENDPOINT"
         valueFrom:
@@ -58,7 +56,6 @@ spec:
       processors:
         # Processor to generate (delta temporality) metrics from
         # spans.
-        # dummy comment
         spanmetrics/dynatrace:
           metrics_exporter: dynatrace
           aggregation_temporality: AGGREGATION_TEMPORALITY_DELTA
