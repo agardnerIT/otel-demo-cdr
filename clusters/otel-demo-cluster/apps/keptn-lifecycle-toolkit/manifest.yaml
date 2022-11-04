@@ -1568,8 +1568,8 @@ spec:
         - name: OTEL_COLLECTOR_URL
           value: otel-collector:4317
         - name: FUNCTION_RUNNER_IMAGE
-          value: ghcr.io/keptn-sandbox/functions-runtime:v0.3.0
-        image: ghcr.io/keptn-sandbox/keptn-lifecycle-operator:dev-202211031354
+          value: ghcr.io/keptn/functions-runtime:dev-202211031447
+        image: ghcr.io/keptn/keptn-lifecycle-operator:dev-202211031447
         imagePullPolicy: Always
         livenessProbe:
           httpGet:
@@ -1968,7 +1968,7 @@ spec:
         env:
         - name: OTEL_COLLECTOR_URL
           value: otel-collector:4317
-        image: ghcr.io/keptn-sandbox/scheduler:dev-202211031447
+        image: ghcr.io/keptn/scheduler:dev-202211031447
         livenessProbe:
           httpGet:
             path: /healthz
