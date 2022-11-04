@@ -2,10 +2,9 @@
 apiVersion: lifecycle.keptn.sh/v1alpha1
 kind: KeptnTaskDefinition
 metadata:
-  name: keptn-task1
-  namespace: otel-demo
+  name: pre-deployment-hello
 spec:
   function:
     inline:
       code: |
-        console.log(">> Post-Deployment Task has been executed 2");
+        console.log(">> Pre-Deployment Task has been executed");
