@@ -58,6 +58,7 @@ spec:
       processors:
         # Processor to generate (delta temporality) metrics from
         # spans.
+        # dummy comment
         spanmetrics/dynatrace:
           metrics_exporter: dynatrace
           aggregation_temporality: AGGREGATION_TEMPORALITY_DELTA
