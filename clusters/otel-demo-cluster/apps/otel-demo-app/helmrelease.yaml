@@ -32,14 +32,14 @@ spec:
                 keptn.sh/workload: "my-otel-demo-adservice"                 # Label for KLC
                 keptn.sh/version: "0.6.1"                                   # Label for KLC
             spec:
-              replicas: 2
+              replicas: 1
               template:
                 metadata:
                   labels:
                     owner: "TeamA"
                     priority: "P5"
                     variant: "var1"
-                    app.kubernetes.io/part-of: "otel-demo"
+                    #app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
                     app.kubernetes.io/version: "0.6.1"
                     keptn.sh/workload: "adservice"
@@ -49,7 +49,7 @@ spec:
                     owner: "TeamA"
                     priority: "P5"
                     variant: "var1"
-                    app.kubernetes.io/part-of: "otel-demo"
+                    #app.kubernetes.io/part-of: "otel-demo"
                     dynatrace-release-stage: "production"
                     app.kubernetes.io/version: "0.6.1"
                     keptn.sh/workload: "adservice"
