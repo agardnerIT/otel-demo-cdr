@@ -32,7 +32,7 @@ spec:
               #   keptn.sh/version: "0.6.1"                                   # Label for KLC
               # dummy to force re-install
             spec:
-              replicas: 1
+              replicas: 2
               template:
                 metadata:
                   labels:
