@@ -9,3 +9,4 @@ resources:
   - "helmsource.yaml"
   - "helmrelease.yaml"
   - "klt-pre-deployment-tasks.yaml"
+  - "keptn-app.yaml"
