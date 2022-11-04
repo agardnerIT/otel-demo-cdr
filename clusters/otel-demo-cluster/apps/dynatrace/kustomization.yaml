@@ -5,7 +5,8 @@ metadata:
   name: dynatrace-oneagent
   namespace: dynatrace
 resources:
+  - namespace.yaml
+  - otel-demo-sealed.yaml
   - classicFullStack.yaml
   - helmrelease.yaml
   - helmsource.yaml
-  - namespace.yaml
