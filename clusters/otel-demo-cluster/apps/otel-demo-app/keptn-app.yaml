@@ -1,0 +1,10 @@
+apiVersion: lifecycle.keptn.sh/v1alpha1
+kind: KeptnApp
+metadata:
+  name: otel-demo
+  namespace: otel-demo
+spec:
+  version: "0.6.1"
+  workloads:
+    - name: "my-otel-demo-adservice" # This must match app.kubernetes.io/name or "keptn.sh/workload" label
+      version: "0.6.1" #dummy
