@@ -1,8 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
-metadata:
-  name: opentelemetry
-  namespace: keptn-lifecycle-toolkit-system
-spec:
-  interval: 1h0m0s
-  url: https://open-telemetry.github.io/opentelemetry-helm-charts
