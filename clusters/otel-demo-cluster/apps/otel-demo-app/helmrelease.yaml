@@ -14,13 +14,12 @@ spec:
   interval: 1m00s
   postRenderers:
     - kustomize:
-        patchesStrategicMerge:
+        patches:
           # adservice
           - kind: Deployment
             apiVersion: apps/v1
             metadata:
               name: my-otel-demo-adservice
-              namespace: otel-demo
               # labels:
               #   owner: "TeamA"
               #   priority: "P5"
