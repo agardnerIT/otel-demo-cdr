@@ -6,5 +6,6 @@ metadata:
   namespace: keptn-lifecycle-toolkit-system
 resources:
   - "dynatrace-connection-details-sealed.yaml"
+  - "helmsource.yaml"
   - "otelcol-helmrelease.yaml"
   - "manifest.yaml"
