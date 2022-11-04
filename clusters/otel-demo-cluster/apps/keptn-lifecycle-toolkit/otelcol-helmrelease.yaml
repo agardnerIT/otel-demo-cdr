@@ -34,6 +34,7 @@ spec:
           secretKeyRef:
             key: "OTEL_EXPORTER_OTLP_METRICS_TEMPORALITY_PREFERENCE"
             name: "dynatrace-connection-details"
+    mode: daemonset
     config:
       receivers:
         otlp:
