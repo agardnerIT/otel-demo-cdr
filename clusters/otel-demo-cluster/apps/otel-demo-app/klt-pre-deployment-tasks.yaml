@@ -9,3 +9,11 @@ spec:
     inline:
       code: |
         console.log(">> Pre-Deployment Task has been executed");
+        try {
+          let resp = await fetch("https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660");
+        }
+        catch (error){
+          console.error("Could not fetch url");
+          Deno.exit(1);
+        }
+        
