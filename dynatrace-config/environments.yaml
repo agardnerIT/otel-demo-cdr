@@ -1,4 +1,0 @@
-dt-env:
-  - name: "dt-env"
-  - env-url: "{{ .Env.DT_ENV_URL }}"
-  - env-token-name: "DT_TOKEN"
