@@ -1,0 +1,25 @@
+---
+apiVersion: lifecycle.keptn.sh/v1alpha1
+kind: KeptnTaskDefinition
+metadata:
+  name: pre-deployment-hello
+  namespace: jobs
+spec:
+  function:
+    inline:
+      code: |
+        console.log(">> Pre-Deployment Task has been executed");
+        try {
+          let resp = await fetch("https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660", {
+              headers: {
+                'x-header-from': 'keptn-lifecycle-toolkit',
+                'x-task': 'pi-job'
+              }
+            }
+          );
+        }
+        catch (error){
+          console.error("Could not fetch url");
+          Deno.exit(1);
+        }
+        

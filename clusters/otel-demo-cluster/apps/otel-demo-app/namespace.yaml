@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: otel-demo
   annotations:
-    keptn.sh/lifecycle-toolkit: "enabled"  # this lines tells the webhook to handle the namespace
+    keptn.sh/lifecycle-controller: "enabled"  # this lines tells the webhook to handle the namespace
