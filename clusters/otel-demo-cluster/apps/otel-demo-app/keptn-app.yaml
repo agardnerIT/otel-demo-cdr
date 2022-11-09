@@ -7,4 +7,4 @@ spec:
   version: "0.0.1"
   workloads:
     - name: "my-otel-demo-adservice"
-      version: "0.6.5"
+      version: "0.6.6"
