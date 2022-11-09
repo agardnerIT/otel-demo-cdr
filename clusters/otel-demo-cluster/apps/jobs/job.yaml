@@ -6,11 +6,11 @@ metadata:
 spec:
   template:
     metadata:
-      # annotations:
-      #   app.kubernetes.io/part-of: "pi-job"
-      #   app.kubernetes.io/version: "0.0.1"
-      #   keptn.sh/workload: "my-otel-demo-adservice"  
-      #   keptn.sh/pre-deployment-tasks: "pre-deployment-hello"
+      annotations:
+        app.kubernetes.io/part-of: "pi-job"
+        app.kubernetes.io/version: "0.0.1"
+        keptn.sh/workload: "my-otel-demo-adservice"  
+        keptn.sh/pre-deployment-tasks: "pre-deployment-hello"
     spec:
       containers:
       - name: pi
