@@ -2,18 +2,18 @@
 apiVersion: lifecycle.keptn.sh/v1alpha1
 kind: KeptnTaskDefinition
 metadata:
-  name: pre-deployment-hello
+  name: post-deployment-hello
   namespace: otel-demo
 spec:
   function:
     inline:
       code: |
-        console.log(">> Pre-Deployment Task has been executed");
+        console.log(">> Post-Deployment Task has been executed");
         try {
           let resp = await fetch("https://webhook.site/3fee1127-d56a-4ac9-96bf-aff86508e660", {
               headers: {
                 'x-header-from': 'keptn-lifecycle-toolkit',
-                'x-function': 'pre-deployment-hello'
+                'x-function': 'post-deployment-hello'
               }
             }
           );
