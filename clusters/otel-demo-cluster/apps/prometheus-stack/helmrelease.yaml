@@ -6,9 +6,9 @@ metadata:
 spec:
   chart:
     spec:
-      chart: prometheus-stack
+      chart: kube-prometheus-stack
       sourceRef:
         kind: HelmRepository
-        name: prometheus-stack
+        name: prometheus-community
       version: 0.60.1
   interval: 1m00s
