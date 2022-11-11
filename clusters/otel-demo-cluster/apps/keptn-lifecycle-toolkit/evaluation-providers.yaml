@@ -1,0 +1,7 @@
+---
+apiVersion: keptn.sh/v1
+kind: KeptnEvaluationProvider
+metadata:
+  name: prometheus
+spec:
+  targetServer: "http://prometheus-operated.monitoring.svc.cluster.local:9090"
